@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/dextor/StudioProjects/FIREBASE_AUTHENTICATION_USING_PHONE_NUMBERh/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v28/values-v28.xml",
+            "outputFile": "C:\\Users\\LM\\StudioProjects\\FIREBASE_AUTHENTICATION_USING_PHONE_NUMBER\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v28\\values-v28.xml",
             "map": [
                 {
-                    "source": "/home/dextor/.gradle/caches/transforms-2/files-2.1/98b3f089dac962a27dccf36db23e2849/appcompat-1.0.2/res/values-v28/values-v28.xml",
+                    "source": "C:\\Users\\LM\\.gradle\\caches\\transforms-2\\files-2.1\\bb6ddea032bac140d4e03eb0d3efc373\\appcompat-1.0.2\\res\\values-v28\\values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,8",
                         "startColumns": "4,4,4,4",

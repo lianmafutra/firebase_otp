@@ -719,6 +719,7 @@ id barrier
 id beginning
 id blocking
 id bottom
+id button
 id buttonPanel
 id center
 id center_horizontal
@@ -819,7 +820,6 @@ id standard
 id start
 id submenuarrow
 id submit_area
-id t
 id tabMode
 id tag_transition_group
 id tag_unhandled_key_event_manager
@@ -834,7 +834,6 @@ id titleDividerNoCustom
 id title_template
 id top
 id topPanel
-id tv
 id uniform
 id up
 id useLogo

@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 FirebaseAuth mAuth;
 EditText otp,code,sms;
 String verificationId;
-Button send;
+Button send,button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,15 +37,12 @@ Button send;
         code = findViewById(R.id.code);
         send = findViewById(R.id.send);
         sms = findViewById(R.id.otpd);
-
-
-
+        button = findViewById(R.id.button);
 
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if(user!=null){
         Intent i = new Intent(getApplicationContext(),Profile.class);
-            
             startActivity(i);
             
         }
@@ -75,15 +72,14 @@ Button send;
             @Override
             public void onClick(View v) {
                 String number = otp.getText().toString().trim();
-                if ((number.isEmpty()) || number.length() < 10) {
-            otp.setError("Valid number is required");
-            otp.requestFocus();
-            return;
+                sendVerificationCode(number);
+            }
+        });
 
-                }
-
-                final String phoneNumber = "+" + "91" + number;
-        sendVerificationCode(phoneNumber);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                verifyCode(sms.getText().toString());
             }
         });
 
@@ -140,6 +136,7 @@ Button send;
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
                     Intent i = new Intent(getApplicationContext(),Profile.class);
+                    Toast.makeText(MainActivity.this, "Phone Verified."+mAuth.getCurrentUser().getUid(), Toast.LENGTH_SHORT).show();
                     startActivity(i);
                 }
                 else{

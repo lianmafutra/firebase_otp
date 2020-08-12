@@ -4,74 +4,66 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:textSize="20dp"
-    android:padding="10dp"
-    android:id="@+id/tv"
 
-    android:text="WhatsApp will send you an SMS message containing a code you will use to verify your number."/>
-<Spinner
-    android:layout_above="@+id/phnum"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/phnum"
 
-    />
+        />
 
-<EditText
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/otpd"
-android:inputType="number"
-    android:layout_below="@id/phnum"/>
+    <EditText
+        android:id="@+id/otpd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phnum"
+        android:inputType="number" />
 
     <EditText
         android:id="@+id/code"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-
         android:hint="91"
         android:inputType="number"
-
-
         android:maxLength="2"
+
+
         android:nextFocusLeft="@id/phnum"
         android:nextFocusUp="@id/phnum"
         android:nextFocusDown="@id/phnum"
-        android:nextFocusForward="@id/phnum" />
+        android:nextFocusForward="@id/phnum"
+        android:text="+62" />
 
     <EditText
-        android:inputType="number"
         android:id="@+id/phnum"
-android:layout_marginEnd="20dp"
         android:layout_width="227dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-android:maxLength="10"
-        android:hint="Mobile Number" />
+        android:text="+6282210310864"
+        android:layout_marginEnd="20dp"
+        android:hint="Mobile Number"
+        android:inputType="number" />
 
     <Button
+        android:id="@+id/send"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:id="@+id/send"
         android:text="Send Otp" />
-    <TextView
+
+    <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/black"
-
-        android:text="Carrier charges may apply"
-        android:layout_marginTop="10dp"
-        android:layout_below="@id/otpd"
-        android:layout_marginStart="10dp"
-        android:id="@+id/t"
-        android:textSize="15dp"/>
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="136dp"
+        android:layout_marginBottom="139dp"
+        android:text="Button" />
 
 
 </RelativeLayout>
